@@ -5,7 +5,7 @@ def safe_divide(numerator, denominator):
 
         result = numerator / denominator
     
-        return f"The result of division is {round(result,2)}"
+        return f"The result of the division is {round(result,2)}"
     except ValueError:
         return "Error: Please enter numeric values only."
     except ZeroDivisionError:
