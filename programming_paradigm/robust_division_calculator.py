@@ -1,5 +1,12 @@
-def safe_divide(numerator,denominator):
+def safe_divide(numerator, denominator):
     try:
-        return f"The result of division is {numerator/denominator}"
-    except ZeroDivisionError as e:
-        return " Error: Cannot divide by zero."
+        numerator = float(numerator)
+        denominator = float(denominator)
+
+        result = numerator / denominator
+    
+        return f"The result of division is {round(result,2)}"
+    except ValueError:
+        return "Error: Please enter numeric values only."
+    except ZeroDivisionError:
+        return "Error: Cannot divide by zero."
